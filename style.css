@@ -47,7 +47,7 @@ a:focus-visible, .button:focus-visible { outline: 3px solid var(--ink); outline-
 .game .body { padding: 20px; }
 .game .head { display: flex; align-items: center; gap: 14px; }
 .game .icon { width: 64px; height: 64px; border-radius: 14px; border: 3px solid var(--line); flex: none; }
-.game h2 { margin: 0; font-size: 28px; letter-spacing: 1px; }
+.game h1, .game h2 { margin: 0; font-size: 28px; letter-spacing: 1px; }
 .game .status { margin: 0; color: var(--muted); font-size: 15px; }
 .game blockquote { margin: 16px 0; padding: 0; font-size: 19px; }
 .game ul { margin: 0 0 16px; padding-left: 20px; color: var(--muted); }
@@ -61,6 +61,22 @@ a:focus-visible, .button:focus-visible { outline: 3px solid var(--ink); outline-
   font-weight: 700;
   font-size: 16px;
 }
+
+.doc .game { margin-top: 24px; }
+.doc .game h1 { margin: 0; }
+.shots {
+  list-style: none;
+  margin: 24px -16px;
+  padding: 0 16px 8px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(150px, 1fr);
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+.shots li { margin: 0; scroll-snap-align: start; }
+.shots img { display: block; width: 100%; height: auto; border: 3px solid var(--line); border-radius: 12px; }
 
 .doc h1 { font-size: 32px; line-height: 1.2; margin: 24px 0 4px; }
 .doc h2 { font-size: 22px; line-height: 1.3; margin: 28px 0 8px; }
